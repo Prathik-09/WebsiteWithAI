@@ -1,19 +1,14 @@
-import  { useState } from 'react';
-import './HomePage.css';
+
+import Footer from './Footer.js';
+import Header from'./Header.js';
+import Section from './Section.js';
 
 const HomePage = () => {
-    const [isBlue, setIsBlue] = useState(false);
-
-    const toggleColor = () => {
-        setIsBlue(!isBlue);
-    };
-
     return (
         <div className="cafe-homepage">
-            <h1>Welcome to Webcafe AI</h1>
-            <p>Your go-to solution for AI-driven web applications.</p>
-            <div className={`cafe-color-box ${isBlue ? 'cafe-blue' : 'cafe-red'}`}></div>
-            <button className="cafe-button" onClick={toggleColor}>Change Color</button>
+            <Header/>
+            <Section/>
+            <Footer/>
         </div>
     );
 };
